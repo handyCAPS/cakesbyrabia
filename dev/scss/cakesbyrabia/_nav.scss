@@ -1,0 +1,59 @@
+
+
+
+/********************
+
+    TOPNAV
+
+********************/
+
+
+.nav__top {
+    @extend .cf;
+    background-color: $black;
+    margin-bottom: $base-spacing-unit;
+    text-align: center;
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        li {
+            float: left;
+            position: relative;
+            transition: 0.3s;
+            text-shadow: 0px 0px 0px $black;
+                &:not(:first-of-type):not(:last-of-type) {
+                    margin: 0 $base-spacing-unit / 2;
+                }
+                &:hover {
+                    background-color: darken($mint-green, 16);
+                    text-shadow: 0px 0.6px 1.3px $black;
+                        ul {
+                            display: block;
+                        }
+                }
+                ul {
+                    position: absolute;
+                    left: 0;
+                    top: 100%;
+                    display: none;
+                    z-index: 999;
+                }
+                li {
+                    float: none;
+                    background-color: $black;
+                    width: 100%;
+                    margin: 0!important;
+                }
+        }
+        a {
+            color: $nav-top-color;
+            text-transform: uppercase;
+            display: block;
+            padding: $base-spacing-unit / 4 $base-spacing-unit / 1.618;
+            font-size: 1.2rem;
+        }
+}

@@ -1,0 +1,19 @@
+
+
+.title {
+    width: span(8 of 12);
+    float: left;
+}
+
+.logo {
+    width: span(4 of 12);
+    float: right;
+    text-align: center;
+        img {
+            width: 100%;
+            max-width: 200px;
+            display: inline-block;
+            vertical-align: middle;
+            margin: $base-spacing-unit auto;
+        }
+}

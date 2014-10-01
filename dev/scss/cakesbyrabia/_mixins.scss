@@ -1,0 +1,31 @@
+
+
+@mixin ribbon($color: $mint-green, $left: - $base-spacing-unit, $padding:  $base-spacing-unit / 4 $base-spacing-unit) {
+    background-color: $color;
+    display: inline-block;
+    padding: $padding;
+    margin: 0;
+    @include mb();
+    position: relative;
+    left: $left;
+    border: 2px dashed darken($color, 26);
+    box-shadow: 0 0 0 4px $color;
+        &:before {
+            content: '';
+            border: $base-spacing-unit solid transparent;
+            border-right-color: darken($color, 20);
+            position: absolute;
+            left: - 30px;
+            bottom: - 30px;
+            z-index: -1;
+            display: block;
+        }
+}
+
+@mixin mb() {
+    margin-bottom: $base-spacing-unit;
+}
+
+@mixin body-padding() {
+    padding: $base-spacing-unit / 1.618 $base-spacing-unit / 2;
+}

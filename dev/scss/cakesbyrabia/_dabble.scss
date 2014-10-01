@@ -1,0 +1,79 @@
+
+
+h1 {
+    font-family: 'Merienda', 'Engagement', sans-serif;
+    font-weight: normal;
+    font-size: 3.6rem;
+    margin: 0 0 $base-spacing-unit;
+    color: $dark-brown;
+    text-shadow:    0 0 1px $white,
+                    0 0 2px $white,
+                    0 0 3px $white,
+                    0 0 4px $white;
+    @include ribbon($mint-green, 4px, 0 12px 2px);
+    position: absolute;
+    @media screen and (max-width: 68rem) {
+        font-size: 2rem;
+        @include ribbon($mint-green, 12px, 0 8px);
+        position: absolute;
+    }
+    @media screen and (max-width: 48rem) {
+        font-size: 1.5rem;
+        @include ribbon($mint-green, 12px, 0 4px);
+        position: absolute;
+    }
+}
+
+.slider {
+    float: left;
+    width: span(8 of 12);
+    border: $base-spacing-unit / 2 solid $white;
+    margin: $base-spacing-unit 0;
+        img {
+            width: 100%;
+            vertical-align: middle;
+        }
+}
+.svg--div {
+    position: absolute;
+    width: 90%;
+    z-index: -2;
+    margin: 0 auto;
+    text-align: center;
+}
+.svg {
+    width: 100%;
+    max-width: 58rem;
+    opacity: 0.7;
+}
+
+.content__body {
+    @include mb();
+    @extend .cf;
+    position: relative;
+    float: left;
+}
+
+.content__body--left {
+    @include mb();
+    width: span(8 of 12);
+}
+
+.post__wrap {
+    @include mb();
+    @include body-padding();
+    display: inline-block;
+    background: url('../../img/swirl-corner.svg') -1px 0 / 33.3333% no-repeat;
+    background-color: $white;
+    box-shadow: 0 12px 12px -12px rgba($black,0.8);
+}
+
+.post__header {
+    @include ribbon();
+    max-width: 50%
+}
+
+.content__body--right {
+    width: span(4 of 12);
+    padding-left: $base-spacing-unit;
+}

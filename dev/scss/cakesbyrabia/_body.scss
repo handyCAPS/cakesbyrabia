@@ -1,0 +1,62 @@
+
+
+/*------------------------------------*\
+$CLEARFIX
+\*------------------------------------*/
+/**
+* Micro clearfix, as per: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
+* Extend the clearfix class with Sass to avoid the `.cf` class appearing over
+* and over in your markup.
+*/
+.cf {
+    &:after {
+        content:"";
+        display:table;
+        clear:both;
+    }
+}
+
+html {
+    box-sizing: border-box;
+    font-size: $base-fontsize;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background: linear-gradient(rgba($full-pink, 0.8),rgba($full-pink, 0.8)), url('../../img/flowertrail.png');
+    font-family: 'Rajdhani', sans-serif;
+    text-rendering: optimizeLegibility;
+        @media screen and (min-width: 68rem) {
+            font-size: 1.3rem;
+        }
+}
+
+#outerWrap {
+    // background-color: rgba(120,60,10,0.4);
+    // min-height: 600px;
+}
+
+.content-wrap {
+    @extend .cf;
+    @include container(72rem);
+    padding: 0 $base-spacing-unit;
+    position: relative;
+}
+
+a {
+    color: $link-color;
+    text-decoration: none;
+        &:hover {
+            color: darken($link-color, 20);
+        }
+        &:visited {
+            color: desaturate(lighten($link-color, 20), 20);
+        }
+}
+
+p {
+    margin: 0 0 $base-spacing-unit;
+}
